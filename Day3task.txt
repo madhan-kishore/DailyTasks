@@ -1,0 +1,140 @@
+String functions
+'''a="madHan"
+print(a.upper()) #MADHAN
+print(a.lower())  #madhan
+print(a.title())  #Madhan
+print(a.capitalize())  #Madhan
+print(a.swapcase())  #MADhAN
+print(a.find("m")) #0
+print(a.index("a")) #1
+print(a.count("a")) #2
+print(a.startswith("d")) #False
+print(a.replace("m","d")) #dadHan
+print(a.strip()) #madHan
+print(a.split(",")) #['madHan']
+print(a.isalnum()) #True
+print(a.isalpha()) #True
+print(a.isdigit()) #False
+print(a.islower()) #False
+print(a.isupper()) #False
+print(len(a)) #6'''
+
+
+List functions
+'''a=[1,2,3,4,5]
+a.append(6)
+a.extend([7,8])
+a.insert(0,0)
+a.pop(1)
+a.remove(3)
+#a.clear()
+a.count(2)
+a.sort()
+a.sort(reverse=True)
+a.reverse()
+b=a.copy()
+c=len(a)'''
+
+Tuple function
+'''a=(1,2,3,4,5)
+print(a.count(2)) #1
+print(a.index(2)) #1
+print(len(a)) #5
+b=(6,7,8,9,10)
+print(a+b) #(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(2 in a) #True
+print(min(a)) #1
+print(max(a)) #5
+print(sum(a)) #15
+print(sorted(a)) #[1, 2, 3, 4, 5]'''
+
+
+
+
+'''a=int(input())
+if(a>=90 and a<=100):
+    print("Grade A")
+elif(a>=70 and a<=80):
+    print("Grade B")
+elif(a>=60 and a<=70):
+    print("Grade A")
+else:
+    print("fail")'''
+    
+    
+'''reverse string:    
+a="Madhan"
+b=a[::-1]   
+print(b) '''
+
+''' palindrome string:
+a="MadaM"
+b=a[::-1]   
+print(b==a)'''
+
+'''a=(1,2,3)
+for x in a:
+    print(x)'''
+  
+'''fibonacci  
+n=10    
+a=0
+b=1
+print(a)
+print(b)
+for i in range(2,n):
+    c=a+b
+    print(c)
+    a=b
+    b=c'''
+    
+'''num=int(input())
+if(num%2==0):
+    print("Even")   
+else:
+    print("odd")'''
+    
+'''for i in range(1,101):
+    if(i%2==0):
+        print("@")
+    else:
+        print(i)  '''
+        
+'''num=int(input()) 
+if num<2:
+    print("Not prime")
+else:
+    is_prime=True
+    for i in range(2,num):
+        if num%i==0:
+             is_prime=False
+             break
+    if(is_prime):
+        print("prime")
+    else:
+        print("not prime")  '''
+        
+        
+'''a=[2,3,4]
+for x in a:
+    print(x*x)  '''
+    
+'''a={
+    "name":"madhan",
+    "age":21,
+    "country":"india"
+}  
+print(a.keys())   #dict_keys(['name', 'age', 'country']) 
+key=input()
+if key in a:
+    print(a[key]) '''   
+    
+'''def user():
+    name=input()
+    age=int(input())
+    return name,age
+def display(name,age):
+    print("name=",name)
+    print("age=",age)
+a,b=user()
+display(a,b)  '''

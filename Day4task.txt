@@ -1,0 +1,133 @@
+#Inheritance:
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    
+class Dog(Animal):
+    def sound(self):
+        return "woof!"
+a=Animal("Generic Animal")
+d=Dog("Buddy")
+
+print(a.name) 
+print(d.name)
+print(d.sound()) 
+
+
+#Multilevel Inheritance:
+
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Dog(Animal):
+    def sound(self):
+        return "woof!"
+class Puppy(Dog):
+    def shout(self):
+        return "Bow Bow!"
+p=Puppy("Cookie")
+print(p.name)
+print(p.sound())
+print(p.shout())
+
+
+#Hierarchical inheritance:
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Dog(Animal):
+    def sound(self):
+        return "Woof!"
+class Puppy(Animal):
+    def sound(self):
+        return "Bow!"
+a=Dog("Cookie")
+b=Puppy("Cheeku")
+print(a.name)
+print(a.sound())
+print(b.name)
+print(b.sound)                
+    
+  
+#Multiple Inheritance:
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Dog:
+    def sound(self):
+        return "Boooooooooow"
+class Puppy(Animal, Dog):
+    def shout(self):
+        return "How How!"
+p=Puppy("Cookie")
+print(p.name)
+print(p.sound())
+print(p.shout())
+
+#Hybrid inheritance:
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Dog(Animal):
+    def sound(self):
+        return "Bow!"
+class Puppy(Animal, Dog):
+    def shout(self):
+        return "Howw!"
+d=Dog("Cookie")    
+p=Puppy("cheeku")      
+print(d.name)
+print(p.name)   
+
+
+#Polymorphism:
+#method overloading:
+class Calculator:
+    def add(self, a, b=0, c=0):
+        return a+b+c
+calc=Calculator()
+print(calc.add(5))
+print(calc.add(5,10))
+print(calc.add(5,10,15))    
+    
+
+#Method overriding
+class Animal:
+    def sound(self):
+        return "Woof!"
+class Dog(Animal):
+    def sound(self):
+        return "Bow!"
+a=Animal()
+d=Dog()
+print(a.sound())
+print(d.sound())
+
+
+#Encapsulation with all modifiers:
+class Animal:
+    def _init_(self, name, species, sound):
+        self.name = name            # Public
+        self._species = species     # Protected
+        self.__sound = sound        # Private
+
+    def get_sound(self):  # Public getter for private variable
+        return self.__sound
+
+    def set_sound(self, new_sound):  # Public setter for private variable
+        self.__sound = new_sound
+
+# Creating object
+a = Animal("Buddy", "Dog", "Woof")
+
+# Accessing public member
+print(a.name)         # Output: Buddy
+
+# Accessing protected member (possible, but discouraged outside class or subclass)
+print(a._species)     # Output: Dog
+
+# Accessing private member (raises error if done directly)
+# print(a.__sound)    # AttributeError
+
+# Accessing private member using getter
+print(a.get_sound())  # Output: Woof

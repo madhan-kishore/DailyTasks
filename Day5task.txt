@@ -1,0 +1,37 @@
+#pasword verification
+import re
+password=r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}&"   
+text="Sailaja@1" 
+match=re.search(password,text)
+if match:
+    print("Password accepted:",match.group())
+    
+
+
+
+    
+#url verification    
+url=r"http[s]+://www.[a-zA-Z0-9]+.[a-zA-Z]{2,}"
+text="https://www.google.com"
+match=re.search(url,text)
+if match:
+    print("url i correct")      
+    
+
+
+
+
+#Types of errors in exception handling:    
+try:
+    num=int(input("Enter a number"))
+    result=10/num    
+except ValueError as e:
+    print("please enter a number")
+except ZeroDivisionError as e:
+    print("cannot divide by zero") 
+except Exception as e:
+    print("An unexcepted")       
+else:
+    print(f"Result:{result}")
+finally:
+    print("Successfully Executed")
